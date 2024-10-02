@@ -5,6 +5,7 @@ import Signup from './pages/SignuPage/Signup'
 import ForgotPassword from './pages/ForgotPasswordPage/ForgotPassword'
 import RecoverPassword from './pages/RecoverPass/RecoverPassword'
 import DataTable from './pages/Tables/DataTables'
+import Dashboard from './pages/Dashboard/Dashboard'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route path='/forgotpassword' element={<ForgotPassword />} />
         <Route path='/recoverpassword' element={<RecoverPassword />} />
         <Route path='/dtble' element={<DataTable />} />
+        <Route path='/dashboard' element={<Dashboard />} />
       </Routes>
     </BrowserRouter>
   )

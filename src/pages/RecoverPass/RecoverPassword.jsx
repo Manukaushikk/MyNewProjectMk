@@ -6,7 +6,7 @@ const RecoverPassword = () => {
         <div className="flex items-center justify-center min-h-screen bg-gray-100">
             <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-lg shadow-md">
                 <div className="text-center">
-                    <h1 className="text-2xl font-bold text-blue-600">AdminLTE</h1>
+                    <h1 className="text-2xl font-bold text-blue-600">eRMC</h1>
                     <p className="mt-2 text-gray-600">
                         You are only one step away from your new password. Recover your password now.
                     </p>

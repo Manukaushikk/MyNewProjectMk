@@ -8,7 +8,7 @@ const SignIn = () => {
         <div className="min-h-screen flex items-center justify-center bg-gray-200">
             <div className="w-full max-w-sm bg-white p-8 rounded-lg shadow-md">
                 <div className="text-center mb-4">
-                    <h1 className="text-2xl font-bold">Admin <span className="text-blue-500">LTE</span></h1>
+                    <h1 className="text-2xl font-bold">e<span className="text-blue-500">RMC</span></h1>
                 </div>
                 <p className="text-center text-gray-600 mb-4">Sign in to start your session</p>
                 <form action="../../index3.html" method="post">

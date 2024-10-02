@@ -7,7 +7,7 @@ const Signup = () => {
             <div className="w-full max-w-md bg-white rounded-lg shadow-md p-8">
                 <div className="text-center mb-6">
                     <h1 className="text-3xl font-bold">
-                        <span className="text-blue-600">Admin</span> LTE
+                        <span className="text-blue-600">e</span>RMC
                     </h1>
                 </div>
                 <p className="text-center text-gray-600 mb-4">Register a new membership</p>

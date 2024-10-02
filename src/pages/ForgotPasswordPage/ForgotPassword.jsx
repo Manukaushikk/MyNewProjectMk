@@ -9,7 +9,7 @@ const ForgotPassword = () => {
             <div className="w-full max-w-sm bg-white p-8 rounded-lg shadow-lg">
                 <div className="text-center mb-6">
                     <Link to="/">
-                        <h1 className="text-2xl font-bold text-blue-600">Admin <span className="text-blue-500">LTE</span></h1>
+                        <h1 className="text-2xl font-bold text-blue-600">e<span className="text-blue-500">RMC</span></h1>
                     </Link>
                 </div>
 
