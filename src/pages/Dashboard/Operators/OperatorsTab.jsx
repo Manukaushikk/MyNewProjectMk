@@ -108,24 +108,24 @@ const OperatorsTab = () => {
     };
 
     return (
-        <div className="container mx-auto p-5">
-            <h1 className="text-2xl font-bold mb-4">DataTable</h1>
+        <div className="container mx-auto p-5 bg-gray-50 rounded shadow-md">
+            <h1 className="text-3xl font-bold mb-6 text-center text-gray-800">Data Table</h1>
             <input
                 type="text"
                 placeholder="Search..."
-                className="p-2 border rounded w-full mb-4"
+                className="p-2 border border-gray-300 rounded w-full mb-4 focus:outline-none focus:ring focus:ring-blue-500"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
             />
-            <div className="overflow-x-auto mb-4">
-                <table className="min-w-full bg-white border border-gray-300">
+            <div className="overflow-x-auto mb-6">
+                <table className="min-w-full bg-white border border-gray-300 shadow-md">
                     <thead>
                         <tr className="bg-gray-200 text-gray-700">
-                            <th className="py-2 px-4 border">Rendering Engine</th>
-                            <th className="py-2 px-4 border">Browser</th>
-                            <th className="py-2 px-4 border">Platform(s)</th>
-                            <th className="py-2 px-4 border">Engine Version</th>
-                            <th className="py-2 px-4 border">CSS Grade</th>
+                            <th className="py-3 px-4 border text-left">Rendering Engine</th>
+                            <th className="py-3 px-4 border text-left">Browser</th>
+                            <th className="py-3 px-4 border text-left">Platform(s)</th>
+                            <th className="py-3 px-4 border text-left">Engine Version</th>
+                            <th className="py-3 px-4 border text-left">CSS Grade</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -142,20 +142,20 @@ const OperatorsTab = () => {
                 </table>
             </div>
 
-            <div className="flex justify-between items-center mt-4">
+            <div className="flex justify-between items-center mb-4">
                 <span className="text-sm text-gray-700">
                     Showing {indexOfFirstEntry + 1} to {indexOfLastEntry > totalEntries ? totalEntries : indexOfLastEntry} of {totalEntries} entries (filtered from {data.length} total entries)
                 </span>
                 <div>
                     <button
-                        className="px-4 py-2 border rounded-l bg-gray-200"
+                        className="px-4 py-2 border rounded-l bg-gray-200 hover:bg-gray-300 transition duration-200"
                         onClick={handlePreviousPage}
                         disabled={currentPage === 1}
                     >
                         Previous
                     </button>
                     <button
-                        className="px-4 py-2 border rounded-r bg-gray-200"
+                        className="px-4 py-2 border rounded-r bg-gray-200 hover:bg-gray-300 transition duration-200"
                         onClick={handleNextPage}
                         disabled={currentPage >= Math.ceil(totalEntries / entriesPerPage)}
                     >
@@ -164,11 +164,11 @@ const OperatorsTab = () => {
                 </div>
             </div>
 
-            <div className="flex space-x-2 mt-4">
-                <button onClick={downloadPDF} className="px-4 py-2 bg-blue-500 text-white rounded">Download PDF</button>
-                <button onClick={downloadCSV} className="px-4 py-2 bg-green-500 text-white rounded">Download CSV</button>
-                <button onClick={downloadExcel} className="px-4 py-2 bg-yellow-500 text-white rounded">Download Excel</button>
-                <button onClick={printTable} className="px-4 py-2 bg-gray-500 text-white rounded">Print</button>
+            <div className="flex space-x-2 mb-4">
+                <button onClick={downloadPDF} className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition duration-200">Download PDF</button>
+                <button onClick={downloadCSV} className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-500 transition duration-200">Download CSV</button>
+                <button onClick={downloadExcel} className="px-4 py-2 bg-yellow-600 text-white rounded hover:bg-yellow-500 transition duration-200">Download Excel</button>
+                <button onClick={printTable} className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-500 transition duration-200">Print</button>
             </div>
         </div>
     );
