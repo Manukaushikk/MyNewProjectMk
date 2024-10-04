@@ -1,0 +1,69 @@
+.navbar-container {
+    display: flex;
+    /* Flex container for navbar and sidebar */
+    position: relative;
+    /* Position relative for absolute positioning of sidebar */
+}
+
+.main-header {
+    z-index: 1001;
+    /* Keep navbar above sidebar */
+    position: relative;
+    /* Ensure navbar is positioned above sidebar */
+}
+
+.sidebar {
+    transition: transform 0.3s ease;
+    /* Animation for sliding effect */
+    position: fixed;
+    /* Fix position to the left */
+    top: 0;
+    left: 0;
+    height: 100%;
+    /* Full height */
+    background-color: grey;
+    /* Set sidebar background color */
+    z-index: 1000;
+    /* Ensure it's below navbar but above content */
+}
+
+.sidebar.hidden {
+    transform: translateX(-50%);
+    /* Only hide half */
+}
+
+.sidebar.half {
+    transform: translateX(0);
+    /* Show half (50% visible) */
+    width: 100px;
+    /* Width when half-visible (adjust as needed) */
+}
+
+.sidebar.full {
+    transform: translateX(0);
+    /* Show full */
+    width: 250px;
+    /* Full width of the sidebar */
+}
+
+.dashboard-content {
+    margin-left: 100px;
+    /* Space for the half-visible sidebar */
+    transition: margin-left 0.3s ease;
+    /* Smooth transition for content */
+}
+
+.navbar-container.hidden .dashboard-content {
+    margin-left: 50px;
+    /* Margin when the sidebar is hidden */
+}
+
+.navbar-container.half .dashboard-content {
+    margin-left: 150px;
+    /* Margin when sidebar is half-visible */
+}
+
+.navbar-container.full .dashboard-content {
+    margin-left: 250px;
+    /* Margin when sidebar is fully visible */
+}
